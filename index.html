@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>mail-dadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <main>
         <div class="container">
             <h1>Seleziona una modalit&agrave;</h1>
-            <button id="mail" onclick="ShowOverlay(1)">Email</button>
-            <button id="dadi" onclick="ShowOverlay(2)">Dadi</button>
+            <button id="mail" onclick="showOverlay(1)">Email</button>
+            <button id="dadi" onclick="showOverlay(2)">Dadi</button>
         </div>
         <div id="overlay" class="overlay">
             <div id="email-container" class="overlay-container">
+                <span class="close" onclick="closeContainer()"></span>
                 <h2>Inserisci la mail su cui effettuare il check</h2>
                 <form action="#">
                     <input id="email" type="email" placeholder="Es. user@gmail.com" required>
-                    <input type="submit" value="Check">
+                    <input type="submit" value="Check" onclick="checkEmail()">
+                </form>
+                <span id="result"></span>
+            </div>
+            <div id="dadi-container" class="overlay-container">
+                <span class="close" onclick="closeContainer()"></span>
+                <h2>Gioco dei dadi</h2>
+                <form action="#">
+                    <input type="submit" value="Let's play">
                 </form>
             </div>
         </div>
     </main>
 
     <script src="./assets/js/overlay.js"></script>
+    <script src="./assets/js/email-check.js"></script>
 </body>
 </html>
