@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mail-dadi</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Seleziona una modalit&agrave;</h1>
+            <button id="mail" onclick="ShowOverlay(1)">Email</button>
+            <button id="dadi" onclick="ShowOverlay(2)">Dadi</button>
+        </div>
+        <div id="overlay" class="overlay">
+            <div id="email-container" class="overlay-container">
+                <h2>Inserisci la mail su cui effettuare il check</h2>
+                <form action="#">
+                    <input id="email" type="email" placeholder="Es. user@gmail.com" required>
+                    <input type="submit" value="Check">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/overlay.js"></script>
+</body>
+</html>
